@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare const excecuteTemplateScript: any;
 
 @Component({
   selector: 'app-menu',
@@ -10,6 +11,7 @@ export class MenuComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    excecuteTemplateScript();
   }
 
 }
