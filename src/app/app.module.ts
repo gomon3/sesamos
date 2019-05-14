@@ -3,16 +3,20 @@ import { NgModule } from '@angular/core';
 
 /* Firebase configuration */
 import { AngularFireModule } from '@angular/fire';
-import { environment } from '../environments/environment';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '@environments/environment';
 
+/* Routing */
 import { AppRoutingModule } from './app-routing.module';
+
+/* Components */
 import { AppComponent } from './app.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { MenuComponent } from './menu/menu.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { FooterComponent } from './footer/footer.component';
+import { NavigationComponent } from '@components/navigation/navigation.component';
+import { MenuComponent } from '@components/menu/menu.component';
+import { HomeComponent } from '@components/home/home.component';
+import { AboutComponent } from '@components/about/about.component';
+import { ContactComponent } from '@components/contact/contact.component';
+import { FooterComponent } from '@components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,7 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase, 'sesamos'),
+    AngularFireDatabaseModule,
     AppRoutingModule
   ],
   providers: [],
